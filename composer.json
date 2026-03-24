@@ -1,0 +1,70 @@
+{
+    "$schema": "https://getcomposer.org/schema.json",
+    "name": "weave-php/openai",
+    "description": "OpenAI provider for the Weave automation package.",
+    "type": "library",
+    "keywords": [
+        "laravel",
+        "weave",
+        "openai",
+        "automation",
+        "chatgpt",
+        "whisper",
+        "embeddings"
+    ],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Weave PHP",
+            "email": "hello@weave-php.dev"
+        }
+    ],
+    "require": {
+        "php": "^8.3",
+        "weave-php/weave": "@dev",
+        "openai-php/client": "^0.10"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^9.0|^10.0|^11.0",
+        "pestphp/pest": "^3.0",
+        "pestphp/pest-plugin-laravel": "^3.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Weave\\OpenAI\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Weave\\OpenAI\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Weave\\OpenAI\\OpenAIServiceProvider"
+            ]
+        }
+    },
+    "config": {
+        "sort-packages": true,
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true,
+    "repositories": [
+        {
+            "type": "path",
+            "url": "../weave"
+        },
+        {
+            "type": "vcs",
+            "url": "git@github.com:weave-php/weave.git"
+        }
+    ],
+    "scripts": {
+        "test": "pest"
+    }
+}

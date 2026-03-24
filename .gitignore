@@ -1,0 +1,29 @@
+# Composer
+/vendor/
+
+# Environment
+.env
+.env.*
+!.env.example
+
+# PHPUnit / Pest
+.phpunit.cache
+.phpunit.result.cache
+phpunit.xml.bak
+
+# Coverage & reports
+/coverage/
+clover.xml
+
+# IDE & OS
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# Logs & temp
+*.log
+/tmp/
